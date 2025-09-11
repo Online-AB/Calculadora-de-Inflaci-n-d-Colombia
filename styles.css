@@ -1,0 +1,125 @@
+/*
+Archivo: styles.css
+Estilos modernos y consistentes para la Calculadora de Inflación y páginas asociadas.
+*/
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%);
+    color: #2d3748;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.header {
+    background: #2b6cb0;
+    color: #fff;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 4px 24px rgba(43,108,176,0.10);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+nav a.active, nav a:hover {
+    background: #2563eb;
+}
+
+.main-container {
+    background: #fff;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(43,108,176,0.10);
+    max-width: 940px;
+    width: 100%;
+    margin: 2.5rem auto 0 auto;
+    padding: 2.5rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    color: #2b6cb0;
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+label {
+    font-weight: 600;
+    color: #2b6cb0;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.2rem;
+    border-radius: 10px;
+    border: 1.5px solid #bcd0ee;
+    font-size: 1.05rem;
+    background: #f1f5fa;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+input[type="number"]:focus, select:focus {
+    border-color: #2b6cb0;
+    outline: none;
+    background: #e9f1fb;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #2b6cb0 0%, #2563eb 100%);
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 8px rgba(43,108,176,0.10);
+    transition: background 0.2s;
+}
+button:hover {
+    background: linear-gradient(90deg, #2563eb 0%, #2b6cb0 100%);
+}
+
+.result {
+    margin-top: 1.5rem;
+    padding: 1.1rem;
+    background: #e9f1fb;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2b6cb0;
+    box-shadow: 0 1px 4px rgba(43,108,176,0.08);
+}
+
+@media (max-width: 600px) {
+    .main-container {
+        padding: 1.2rem 0.5rem;
+    }
+    nav {
+        gap: 1rem;
+    }
+}

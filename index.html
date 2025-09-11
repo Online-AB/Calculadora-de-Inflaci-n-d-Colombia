@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <!-- Mobile Responsiveness -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="referrer" content="always" />
+    <meta name="description" content="Calculadora de inflación Colombia - Herramienta profesional para calcular el impacto de la inflación en tu dinero. Resultados instantáneos y precisos." />
+    <meta name="keywords" content="calculadora de inflación, inflación Colombia, economía, poder adquisitivo, finanzas personales, cálculo de inflación" />
+    <title>Calculadora de Inflación Colombia</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="header">
+        <h1>Calculadora de Inflación Colombia</h1>
+        <nav>
+            <a href="index.html" class="active">Inicio</a>
+            <a href="about.html">Sobre Nosotros</a>
+            <a href="contact.html">Contáctanos</a>
+            <a href="privacy.html">Política de Privacidad</a>
+        </nav>
+    </header>
+    <main class="main-container">
+        <h2>Calcula el impacto de la inflación en tu dinero</h2>
+        <form id="calcForm" autocomplete="off" onsubmit="event.preventDefault(); calculateInflation();">
+            <label for="amount">Cantidad inicial (COP):</label>
+            <input type="number" id="amount" min="0" step="0.01" placeholder="Ejemplo: 1000" required />
+            <label for="startYear">Año inicial:</label>
+            <input type="number" id="startYear" min="1900" max="2100" placeholder="Ejemplo: 2020" required />
+            <label for="endYear">Año final:</label>
+            <input type="number" id="endYear" min="1900" max="2100" placeholder="Ejemplo: 2024" required />
+            <button type="submit">Calcular Inflación</button>
+        </form>
+        <div id="result" class="result" aria-live="polite"></div>
+        <!-- Artículo sobre la Calculadora de Inflación -->
+        <article class="inflation-article" style="margin-top:2.5rem;max-width:800px;">
+            <h2>Calculadora de Inflación: La Herramienta Clave para Entender el Poder Adquisitivo</h2>
+            <p>En tiempos de incertidumbre económica, uno de los conceptos que más preocupa a los consumidores es la inflación. La inflación afecta directamente al poder adquisitivo, lo que significa que, con el tiempo, el dinero pierde su valor y los precios de los bienes y servicios aumentan. Para poder medir y prever cómo esta afecta a nuestras finanzas personales, una de las herramientas más útiles es la calculadora de inflación. Este artículo explica qué es y cómo puede ayudarte a entender mejor el impacto de la inflación en tu economía.</p>
+            <h3>¿Qué es una Calculadora de Inflación?</h3>
+            <p>Una calculadora de inflación es una herramienta en línea que permite calcular cómo ha cambiado el valor del dinero a lo largo del tiempo debido a la inflación. Generalmente, estas calculadoras utilizan datos históricos sobre el índice de precios al consumidor (IPC) para proporcionar estimaciones sobre el impacto de la inflación en una cantidad específica de dinero en un período determinado.</p>
+            <p>Este tipo de herramienta es extremadamente útil para realizar comparaciones entre el valor de una cantidad de dinero en diferentes años o para proyectar cómo se verán afectadas nuestras finanzas si la inflación continúa aumentando.</p>
+            <h3>¿Cómo Funciona una Calculadora de Inflación?</h3>
+            <p>El funcionamiento de una calculadora de inflación es bastante sencillo. Para utilizarla, generalmente solo necesitas ingresar dos elementos:</p>
+            <ul>
+                <li><strong>Monto inicial:</strong> La cantidad de dinero que deseas analizar, que puede ser un valor en cualquier moneda local.</li>
+                <li><strong>Año de inicio y año final:</strong> El período de tiempo que deseas comparar para ver cómo ha cambiado el valor de ese dinero debido a la inflación.</li>
+            </ul>
+            <p>La calculadora luego utilizará datos del IPC para calcular la diferencia en el valor de tu dinero a lo largo del tiempo. Por ejemplo, si tienes $100 en 2010 y quieres saber cuánto valdrían en 2025, la calculadora de inflación te mostrará el valor ajustado por el índice de inflación, dándote una estimación precisa de cómo el poder adquisitivo de esos $100 ha cambiado.</p>
+            <h3>¿Por Qué es Importante Usar una Calculadora de Inflación?</h3>
+            <p>El uso de una calculadora de inflación tiene varias ventajas, especialmente cuando se trata de tomar decisiones financieras informadas. Aquí algunas razones clave para usarla:</p>
+            <ul>
+                <li><strong>Presupuestos más precisos:</strong> Conocer cómo la inflación afecta tus finanzas te permitirá hacer presupuestos más realistas. Al comprender el impacto de la inflación, podrás planificar mejor tus gastos futuros.</li>
+                <li><strong>Proyecciones de ahorro e inversión:</strong> Si estás ahorrando o invirtiendo para el futuro, es esencial tener en cuenta la inflación. Una calculadora de inflación te ayudará a estimar cuánto necesitarás ahorrar para mantener tu poder adquisitivo a lo largo del tiempo.</li>
+                <li><strong>Evaluación de salarios y precios:</strong> Si estás negociando un aumento de salario o el precio de un bien o servicio, entender la tasa de inflación te permitirá hacer comparaciones más informadas y justas.</li>
+                <li><strong>Educación financiera:</strong> Utilizar una calculadora de inflación también es una excelente manera de aprender más sobre la economía y cómo los factores macroeconómicos, como la inflación, afectan a los individuos y las familias.</li>
+            </ul>
+            <h3>¿Dónde Encontrar una Calculadora de Inflación?</h3>
+            <p>Existen numerosas calculadoras de inflación disponibles en línea, tanto en sitios oficiales de entidades gubernamentales como en páginas especializadas en finanzas. Algunas de las más populares incluyen las de bancos centrales, instituciones financieras, y plataformas de educación económica.</p>
+            <p>Lo importante es buscar una calculadora confiable que esté actualizada con los últimos datos sobre la inflación. Muchas de estas herramientas ofrecen cálculos detallados y gráficos fáciles de entender, lo que las convierte en una excelente opción para cualquier persona interesada en la economía.</p>
+            <h3>Conclusión</h3>
+            <p>En resumen, una calculadora de inflación es una herramienta imprescindible para aquellos que desean entender mejor cómo la inflación afecta su dinero a lo largo del tiempo. Ya sea para tomar decisiones sobre presupuestos, ahorros o inversiones, esta herramienta te permitirá tomar decisiones más informadas y proteger tu poder adquisitivo frente a los aumentos de precios. Aprovecha la tecnología y utiliza una <a href="https://calculadorade-inflacion.com/" rel="nofollow" target="_blank">Calculadora de Inflación de Colombia</a> para planificar mejor tu futuro financiero.</p>
+        </article>
+        <section style="width:100%;margin-top:2.5rem;">
+            <h2>¿Cómo funciona?</h2>
+            <p>La inflación reduce el valor de tu dinero con el tiempo. Utiliza esta calculadora para estimar el valor ajustado de una cantidad de dinero entre dos años en Colombia. Ingresa los datos y obtén el resultado al instante.</p>
+        </section>
+    </main>
+    <script>
+        function calculateInflation() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const startYear = parseInt(document.getElementById('startYear').value);
+            const endYear = parseInt(document.getElementById('endYear').value);
+            const resultDiv = document.getElementById('result');
+            if (!amount || !startYear || !endYear) {
+                resultDiv.textContent = 'Por favor, completa todos los campos.';
+                resultDiv.style.color = '#e53e3e';
+                return;
+            }
+            if (endYear <= startYear) {
+                resultDiv.textContent = 'El año final debe ser mayor que el año inicial.';
+                resultDiv.style.color = '#e53e3e';
+                return;
+            }
+            const years = endYear - startYear;
+            const inflationRate = 0.035; // 3.5% anual (ejemplo para Colombia)
+            const adjustedAmount = amount * Math.pow(1 + inflationRate, years);
+            resultDiv.style.color = '#2b6cb0';
+            resultDiv.textContent = `Cantidad ajustada por inflación para ${years} años: ${adjustedAmount.toLocaleString('es-CO', { style: 'currency', currency: 'COP' })}`;
+        }
+    </script>
+</body>
+</html>
+
